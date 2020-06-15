@@ -244,10 +244,6 @@ features:
   eirini:
     # When eirini is enabled, both suse_default_stack and suse_buildpacks must be enabled as well.
     enabled: false
-    registry:
-      service:
-        # This setting is not currently configurable and must be HIDDEN
-        nodePort: 31666
   ingress:
     enabled: false
     tls:
@@ -511,7 +507,7 @@ bits:
   kube:
     external_ips: []
   services:
-    loadbalanced: true
+    nodePort: 31666
 
   blobstore:
     serviceName: "singleton-blobstore"
